@@ -16,6 +16,8 @@ func Debil(filename string) {
 	}
 	src = bytes.Replace(src, []byte("konsola"), []byte("console"), -1)
 	src = bytes.Replace(src, []byte("dziennik"), []byte("log"), -1)
+	src = bytes.Replace(src, []byte("zmienna"), []byte("var"), -1)
+	src = bytes.Replace(src, []byte("pozwol"), []byte("let"), -1)
 	newName := strings.Replace(filename, ".djs", ".js", -1)
 	if err = os.WriteFile(newName, src, 0666); err != nil {
 		log.Fatal(err)
