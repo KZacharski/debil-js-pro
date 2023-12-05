@@ -22,3 +22,5 @@ go.work
 
 
 zrodlo/debil-js-pro
+zrodlo/*.js
+zrodlo/*.djs
